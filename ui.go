@@ -5,6 +5,7 @@ type UI interface {
 	SetKeybinding(k interface{}, fn func())
 	SetFocusChain(ch FocusChain)
 	Run() error
+	Repaint()
 	Quit()
 }
 
