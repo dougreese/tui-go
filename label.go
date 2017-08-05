@@ -61,6 +61,11 @@ func (l *Label) SizeHint() image.Point {
 	return sizeHint
 }
 
+// Text returns the text content of the label.
+func (l *Label) Text() string {
+	return l.text
+}
+
 func (l *Label) heightForWidth(w int) int {
 	return len(strings.Split(wordwrap.WrapString(l.text, uint(w)), "\n"))
 }
